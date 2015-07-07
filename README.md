@@ -17,6 +17,6 @@ di  screteRV"
     * "The METACRAN experiment"
   * Other stuff:
     * ROpenSci
-    * Groundswell towards: RCpp, dplyr, shiny
+    * Groundswell towards: RCpp, dplyr, shiny, magrittr
 
 
