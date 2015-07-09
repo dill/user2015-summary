@@ -14,6 +14,7 @@ Summary talk of useR! 2015 for CREEM
     * ["Manipulation of Discrete Random Variables in R with discreteRV"](http://journal.r-project.org/archive/2015-1/hare-buja-hofmann.pdf)
     * "Classroom experiments"
     * "The METACRAN experiment"
+    * [Thomas Levine's R music/kabab talk](https://thomaslevine.com/!/user-2015/)
   * Other stuff:
     * ROpenSci
     * Groundswell towards: RCpp, dplyr, shiny, magrittr
