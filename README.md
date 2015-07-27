@@ -1,4 +1,8 @@
-# user2015-summary
+---
+title: user2015-summary
+author: Dave Miller & Rob Schick
+
+---
 
 Summary talk of useR! 2015 for CREEM
 
