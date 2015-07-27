@@ -129,5 +129,30 @@ CREEM, University of St Andrews<br/>
 
 <div class="bigquotew">Thanks!</div>
 
+<div class="bigquote">Talks I (Rob) attended</div>
+
+
+
+# `readr`: Tools 
+
+  * Hadley Wickham, RStudio
+  * `readr` makes it easy to read many types of tabular data and do it more quickly ~10x
+  * Delimited files with `read_delim()`, `read_csv()`, `read_tsv()`, and `read_csv2()`
+  * Fixed width files with `read_fwf()`, and `read_table()`
+  * Web log files with `read_log()`
+  * `install.packages("readr")`
+  * Outputs a `dplyr` class
+
+
+
+# Simple Reproducibility with `checkpoint` package
+
+  * David Smith, Microsoft (nee Revolutions)
+  * Uses `MRAN`: Microsoft R Archive Network
+  * Easy, if heavy handed, way to create unique snapshots of current R environments and packages
+     ```library(checkpoint)
+   checkpoint(‘2015-01-28’) # only use package versions that existed at that date
+   checkpoint(‘2015-01-28’, R.version = ‘3.1.1') # forces it to be the same R engine
+   ```
 
 
