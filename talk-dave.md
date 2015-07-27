@@ -115,3 +115,26 @@ CREEM, University of St Andrews<br/>
   * Groundswell towards: `RCpp`, `dplyr`, `shiny`, `magrittr`
 
 <div align="right"><img src="images/ropensci.png"></div>
+
+#
+
+<div class="bigquote">Other highlights</div>
+
+# {.cover}
+
+<img class="cover" src="images/rlsberg.JPG">
+
+# {.cover}
+
+<img class="cover" src="images/axechat.JPG">
+
+
+# {.cover}
+
+<img class="cover" src="images/aalborg.JPG">
+
+
+<div class="bigquotew">Thanks!</div>
+
+
+
