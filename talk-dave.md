@@ -131,9 +131,44 @@ CREEM, University of St Andrews<br/>
 
 <div class="bigquote">Talks I (Rob) attended</div>
 
+<div class="bigquote">Reproducibility</div>
 
 
-# `readr`: Tools 
+# Package Cohorts
+<div align="center"><img src="images/checkpoint-800wi.png"></div>
+
+  * 4 Pillars of Data Analysis: data, code, statistical methods, software used
+  * Software used: _Including Specific Versions_
+  * Versioned Package Cohort
+  * Two approaches: 
+
+# Simple Reproducibility with `checkpoint` package
+
+  * David Smith, Microsoft (nee Revolutions)
+  * Uses `MRAN`: Microsoft R Archive Network
+  * Easy, if heavy handed, way to create unique snapshots of current R environments and packages
+  
+     ```library(checkpoint)
+   checkpoint(‘2015-01-28’) # only use package versions that existed at that date
+   checkpoint(‘2015-01-28’, R.version = ‘3.1.1') # forces it to be the same R engine
+   ```
+   
+   * [slides/explanation](http://www.slideshare.net/RevolutionAnalytics/checkpoint-user-2015)
+
+# Switching R Environments with `switchr`
+
+  * Gabriel Becker and Michael Lawrence (R Core Member), GenenTech
+  * Developed to allow multiple distributed collaborators (~100) within Genentech to share R-based work
+  * `switchr` provides a framework for creating, populating, managing, and switching between multiple package libraries from within an R session
+  * `switchTo()`
+  * `switchBack()`
+  * [Vignette](https://cran.r-project.org/web/packages/switchr/vignettes/switchrvign.pdf)
+  * [slides](http://user2015.math.aau.dk/presentations/97.pdf)
+  
+<div class="bigquote">Data Management</div>
+
+
+# `readr`: Getting your data into R 
 
   * Hadley Wickham, RStudio
   * `readr` makes it easy to read many types of tabular data and do it more quickly ~10x
@@ -142,17 +177,39 @@ CREEM, University of St Andrews<br/>
   * Web log files with `read_log()`
   * `install.packages("readr")`
   * Outputs a `dplyr` class
+  * [Vignette](http://blog.rstudio.org/2015/04/09/readr-0-1-0/)  
+  
+# Testing with `testwhat` package
 
+  * Filip Schouwenaars, Datacamp
+  * Built on `testthat`
+  * Provide informative messages upon error
+  * Relevant for CREEM: Allows for Submission Correctness Tests
+  * `test_error()`, `test_function()`
+  * [Documentation on writing SCTs](https://teach.datacamp.com/sct-design)
+  
+  <div align="right"><img src="images/datacamp.svg"></div>
+  
+# `assertr`: Failing fast and early: assertive/defensive programming for R data analysis pipelines 
 
+  * Tony Fischetti, College Factual
+  * Analysis errors are often errors in data, but can be impossible to detect _easily_
+  * Provide info about how you expect the data to look
+  * Deviations from these assumptions can be caught quickly
+  * `mpg <- c(12.3, 45.2, 30.7, 23); mpg[2] <- - 1 * mpg[2]; mean(mpg)`
+  * [Vignette](https://github.com/tonyfischetti/assertr/blob/master/vignettes/assertr.Rmd)
+  * This led to an awkward moment...
+  
+# `ensurer` package already exists on CRAN 
 
-# Simple Reproducibility with `checkpoint` package
+  * Stephan Bache, Danske Commodities A/S
+  * R does not provide any mechanism for type-safety and since it is not a compiled language, the risk of having unexpected results is there at runtime
+  * [Vignette](https://github.com/smbache/ensurer/blob/master/vignettes/ensurer.Rmd)
+  
+  
+# A proposal for distributed data-structures in R 
 
-  * David Smith, Microsoft (nee Revolutions)
-  * Uses `MRAN`: Microsoft R Archive Network
-  * Easy, if heavy handed, way to create unique snapshots of current R environments and packages
-     ```library(checkpoint)
-   checkpoint(‘2015-01-28’) # only use package versions that existed at that date
-   checkpoint(‘2015-01-28’, R.version = ‘3.1.1') # forces it to be the same R engine
-   ```
-
-
+  * Indrajit Roy and Michael Lawrence, HP Labs and GenenTech
+  * To scale computation, have to distribute data across multiple machines
+  * Unified API for distributed computing. The API supports three shapes of data --- lists, arrays and data frames
+  * [Blog Post](http://blog.revolutionanalytics.com/2015/02/the-hp-workshop-on-distributed-computing-in-r.html)
