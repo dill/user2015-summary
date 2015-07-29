@@ -131,6 +131,9 @@ CREEM, University of St Andrews<br/>
 
 <div class="bigquote">Talks I (Rob) attended</div>
 
+  * Reproducibility
+  * Visualisation (who would have guessed?)
+
 <div class="bigquote">Reproducibility</div>
 
 
@@ -171,7 +174,8 @@ CREEM, University of St Andrews<br/>
 # `readr`: Getting your data into R 
 
   * Hadley Wickham, RStudio
-  * `readr` makes it easy to read many types of tabular data and do it more quickly ~10x
+  * `readr` makes it easy to read many types of tabular data and do it more quickly (~10x speedup)
+  * Better on factors; better on guessing variable types with 100-line scan
   * Delimited files with `read_delim()`, `read_csv()`, `read_tsv()`, and `read_csv2()`
   * Fixed width files with `read_fwf()`, and `read_table()`
   * Web log files with `read_log()`
@@ -213,3 +217,60 @@ CREEM, University of St Andrews<br/>
   * To scale computation, have to distribute data across multiple machines
   * Unified API for distributed computing. The API supports three shapes of data --- lists, arrays and data frames
   * [Blog Post](http://blog.revolutionanalytics.com/2015/02/the-hp-workshop-on-distributed-computing-in-r.html)
+  
+# Do Not Repeat Yourself Workflow
+
+  * Pre-conference workshop from Peter Baker, University of Queensland
+  * Scenarios
+    * I have a very simple question that will only take 5 minutes. I won't need to see you again·
+    * We have several data points that need deleting. Can you rerun the analysis, and insert the new tables and plot into our report by 4pm today?
+    * The journal got back to us: Can you rerun the analysis to take account critisicms of our method? Its not the project we did last year but the one from 2009?
+  * Focus on make, git, markdown
+  * Keep directories same project to project
+  * [package](https://github.com/petebaker/dryworkflow): sets up a git repo, and a standardised structure
+  * [slides](https://petesstatsandr.wordpress.com/r-course-material/)
+  
+  
+# Di Cook Plenary
+
+  * Supervised two R-core members (Wickham & Lawrence)
+  * Haven't progressed much in 20 years (XLispStat)
+  * Tour of Tcl/Tk based interactive graphics
+    * `Xwidgets`
+    * `cranvas` [videos](https://vimeo.com/chxy/videos)
+    * `RGtk`
+    * `rggobi`
+  
+  <div align="right"><img src="images/dicookTimeline.png"></div>
+  
+# Di Cook Plenary - New Developments
+  
+  * ggvis
+  * animint
+  * gridSVG - from Paul Murrell (more later)
+  * plotly
+  * rbokeh
+  * loon (more later)
+  * shiny - but interaction isn't there yet (though see this [example](https://gallery.shinyapps.io/095-plot-interaction-advanced/))
+   
+# Di Cook Plenary - Challenges to Young Developers
+
+  * Interaction on the plot (not there yet)
+  * diff types of brushes - e.g. don’t just pick up one point, but also 5 nearest neighbours 
+  * linking by a key variable 
+  * Program linking and brushing systems
+  * strong connection with model fitting (modellers need us)
+  * portability, easy install, web compatible
+  * large data
+  * incorporate inference (generate lots of plots and cycle between them)
+  * conceptual framework
+  *
+  * [slides](http://user2015.math.aau.dk/presentations/invited_di_cook.pdf)  
+
+
+# d3
+# shiny / htmlWidgets
+# loon (note Tcl/Tk links to Cook’s talk)
+# tmap package (include links to Axis Maps guidelines)
+# gridGraphics & gridSVG
+# teaching R: especial Potter (shiny) and Rundell (course management with github)
