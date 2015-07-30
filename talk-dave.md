@@ -136,6 +136,8 @@ CREEM, University of St Andrews<br/>
   * Reproducibility
   * Visualisation (who would have guessed?)
 
+#
+
 <div class="bigquote">Reproducibility</div>
 
 
@@ -165,7 +167,10 @@ CREEM, University of St Andrews<br/>
   * `switchBack()`
   * [Vignette](https://cran.r-project.org/web/packages/switchr/vignettes/switchrvign.pdf)
   * [slides](http://user2015.math.aau.dk/presentations/97.pdf)
-  
+
+
+
+#
 <div class="bigquote">Data Management</div>
 
 
@@ -227,10 +232,13 @@ CREEM, University of St Andrews<br/>
   * Keep directories same project to project
   * [package](https://github.com/petebaker/dryworkflow): sets up a git repo, and a standardised structure
   * [slides](https://petesstatsandr.wordpress.com/r-course-material/)
-  
+
+#
+
 <div class="bigquote">Visualisation</div>  
-  
+
 # Di Cook Plenary
+<div style="background-image: url(images/dicookTimeline.png); background-repeat:   no-repeat; background-position: bottom right;">
 
   * Supervised two R-core members (Wickham & Lawrence)
   * Haven't progressed much in 20 years (XLispStat)
@@ -239,11 +247,23 @@ CREEM, University of St Andrews<br/>
     * `cranvas` [videos](https://vimeo.com/chxy/videos)
     * `RGtk`
     * `rggobi`
-  
-  <div align="right"><img src="images/dicookTimeline.png"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</div>
+<!--  <div align="right"><img src="images/dicookTimeline.png" width=700px></div>-->
   
 # Di Cook Plenary - New Developments
-  
+
   * ggvis
   * animint
   * gridSVG - from Paul Murrell (more later)
@@ -251,7 +271,7 @@ CREEM, University of St Andrews<br/>
   * rbokeh
   * loon (more later)
   * shiny - but interaction isn't there yet (though see this [example](https://gallery.shinyapps.io/095-plot-interaction-advanced/))
-   
+
 # Di Cook Plenary - Challenges to Young Developers
 
   * Interaction on the plot (not there yet)
