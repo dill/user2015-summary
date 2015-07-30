@@ -1,7 +1,7 @@
 ##
 
 <p align="center"><big>useR! 2015 highlights</big><br/><br/>
-David L Miller<br/><br/>
+David L Miller & Rob Schick<br/><br/>
 CREEMcrackers<small><br/>
 CREEM, University of St Andrews<br/>
 31 July 2015</small>
@@ -129,7 +129,9 @@ CREEM, University of St Andrews<br/>
 
 <div class="bigquotew">Thanks!</div>
 
-<div class="bigquote">Talks I (Rob) attended</div>
+# {.cover}
+
+# Talks I (Rob) attended
 
   * Reproducibility
   * Visualisation (who would have guessed?)
@@ -138,7 +140,6 @@ CREEM, University of St Andrews<br/>
 
 
 # Package Cohorts
-<div align="center"><img src="images/checkpoint-800wi.png"></div>
 
   * 4 Pillars of Data Analysis: data, code, statistical methods, software used
   * Software used: _Including Specific Versions_
@@ -150,13 +151,10 @@ CREEM, University of St Andrews<br/>
   * David Smith, Microsoft (nee Revolutions)
   * Uses `MRAN`: Microsoft R Archive Network
   * Easy, if heavy handed, way to create unique snapshots of current R environments and packages
-  
-     ```library(checkpoint)
-   checkpoint(‘2015-01-28’) # only use package versions that existed at that date
-   checkpoint(‘2015-01-28’, R.version = ‘3.1.1') # forces it to be the same R engine
-   ```
-   
-   * [slides/explanation](http://www.slideshare.net/RevolutionAnalytics/checkpoint-user-2015)
+  * `library(checkpoint)`
+  * `checkpoint(‘2015-01-28’)` # only use package versions that existed at that date
+  * `checkpoint(‘2015-01-28’, R.version = ‘3.1.1')` # forces it to be the same R engine
+  * [slides/explanation](http://www.slideshare.net/RevolutionAnalytics/checkpoint-user-2015)
 
 # Switching R Environments with `switchr`
 
@@ -192,7 +190,7 @@ CREEM, University of St Andrews<br/>
   * `test_error()`, `test_function()`
   * [Documentation on writing SCTs](https://teach.datacamp.com/sct-design)
   
-  <div align="right"><img src="images/datacamp.svg"></div>
+
   
 # `assertr`: Failing fast and early: assertive/defensive programming for R data analysis pipelines 
 
@@ -230,6 +228,7 @@ CREEM, University of St Andrews<br/>
   * [package](https://github.com/petebaker/dryworkflow): sets up a git repo, and a standardised structure
   * [slides](https://petesstatsandr.wordpress.com/r-course-material/)
   
+<div class="bigquote">Visualisation</div>  
   
 # Di Cook Plenary
 
@@ -268,9 +267,91 @@ CREEM, University of St Andrews<br/>
   * [slides](http://user2015.math.aau.dk/presentations/invited_di_cook.pdf)  
 
 
-# d3
-# shiny / htmlWidgets
-# loon (note Tcl/Tk links to Cook’s talk)
-# tmap package (include links to Axis Maps guidelines)
+# Nice maps for print using the `tmap` package 
+
+  * Martijn Tennekes, Statistics Netherlands
+  * Very nice lightweight way to make thematic maps, e.g. choropleth maps
+  * Based on grammar of graphics
+  * [vignette](http://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
+  * [Axis Maps Guide to Thematic Cartography](http://axismaps.github.io/thematic-cartography/)
+  
+  <div align="right"><img src="images/tmap.png"></div>
+  
+  
+# d3 and R shiny - making your graphs come to life
+
+  * Monika Huhn, Astra Zeneca
+  * Data not easily and directly accessible for medical experts
+  * Use what is good about these three components
+    * R - data manipulation
+    * Shiny - web framework with reactive elements
+    * [d3](http://d3js.org/) - beautiful graphics with animated transitions (key for researchers to trace path of a disease)
+  
+# shiny and htmlWidgets
+  
+  * Joe Cheng, RStudio
+  * path from an R data frame to browser rendered java script is hard; htmlwidgets makes this easier
+  * htmlwidgets vs shiny: they are not mutually exclusive. shiny is about tying together a constellation of things together - including html widgets.
+    * [htmlwidgets](http://www.htmlwidgets.org/) - interactivity in the small; data are in the browser
+    * shiny - interactivity in the large; need an R engine
+  * [slides](https://github.com/jcheng5/user2015)
+    
+# Interactive Graphics with ggplot2 and gridSVG
+
+  * Michael Sachs, National Cancer Institute
+  * Problem was interactive ROC curves in medicine
+  * Use R to make svgs with `grid.svg()` package (Murrell)
+  * Use svg modification power of d3 to provide interactivity
+  * [Example 1](http://sachsmc.github.io/UseR2015-Talk/#12)
+  * [Example 2](http://sachsmc.github.io/UseR2015-Talk/#14)
+  * [slides](http://sachsmc.github.io/UseR2015-Talk/#1)
+  
+  
 # gridGraphics & gridSVG
-# teaching R: especial Potter (shiny) and Rundell (course management with github)
+
+  * Paul Murrell, University of Auckland
+  * Pre-conference workshop on grid graphics
+  * High-level plots (`ggplot2`, `lattice`); low-level edits (`grid`)
+  * [slides & code](https://www.stat.auckland.ac.nz/~paul/useR2015-grid/)
+  * Conference talk on `gridSVG` package ([R Journal Article](http://journal.r-project.org/archive/2014-1/murrell-potter.pdf))
+  * [slides](https://www.stat.auckland.ac.nz/~paul/Talks/useR2015/gridgraphics.html)
+  
+# Where Does `grid` sit?
+
+<div align="center"><img src="images/grid-pkgs.svg"></div>
+
+# `gridGraphics` links base and `grid`
+
+<div align="center"><img src="images/gridGraphics.svg"></div>
+
+
+  
+# loon: Tcl/Tk based interactive visualisation toolkit in R
+  
+  * [Adrian Waddell](http://adrian.waddell.ch/), University of Waterloo
+  * Developed [navgraph](http://www.navgraph.com/)
+  * [Sign up to be a beta tester](http://navgraph.com/loon/)
+  * [Example linked windows](http://adrian.waddell.ch/talks/Loon_useR_2015/assets/player/KeynoteDHTMLPlayer.html#34)
+  * [slides](http://adrian.waddell.ch/talks/Loon_useR_2015/assets/player/KeynoteDHTMLPlayer.html#0)
+  
+
+# Teaching statistics with R: shiny
+
+  * Gail Potter, Department of Statistics, California Polytechnic State University
+  * shiny based project to help teach undergraduates statistics
+  * [shiny apps here](http://www.statistics.calpoly.edu/shiny)
+
+# Teaching statistics with R: course management with github
+
+  * Colin Rundell, POP at Duke, ISDS
+  * Talk went through how they teach course to Intro Stats students
+  * I especially liked the use of Github as a course management system
+    * pulls at the homework deadline
+    * can distribute files with push
+    * Accountability - everyone pushing commits, so he can see which student pushing all the code. He can intervene and hold individuals accountable
+  * [Recent Blog Post on Jenny Bryan](http://blog.revolutionanalytics.com/2015/06/get-your-r-education-going-with-github.html)
+  * [slides](https://github.com/rundel/Presentations/blob/master/UseR2015/user2015.pdf)
+  
+# {.cover}
+
+<img class="cover" src="images/dave.JPG">
